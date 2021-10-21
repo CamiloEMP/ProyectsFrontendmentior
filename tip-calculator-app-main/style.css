@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: var(--Light-grayish-cyan)
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+}
+
+header img {
+  width: 75px;
+  height: 45px;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 24px;
+}
+
+input[type=number]{
+  width: 100%;
+  height: 45px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: end;
+  font-weight: 700;
+  background-color: var(--Light-grayish-cyan-2);
+  color: var(--Very-dark-cyan);
+}
+
+input[type=number]::placeholder {
+  color: var(--Dark-grayish-cyan-2);
+  padding: 5px 5px;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.card-inputs-container p {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--Dark-grayish-cyan-2);
+}
+
+.card-container {
+  width: 100vw;
+  height: 670px;
+  background-color: var(--White);
+  padding: 25px 25px;
+  border-radius: 20px;
+}
+
+.container-bill {
+  height: 50px;
+  margin-bottom: 45px;
+}
+
+.container-bill p {
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.container-bill div {
+  position: relative;
+}
+
+.container-bill img {
+  position: absolute;
+  top: 15px;
+  left: 13px;
+}
+
+.container-tip {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px 15px;
+}
+
+.container-tip input[type=button] {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Light-grayish-cyan-2);
+  font-weight: 700;
+  border-radius: 5px;
+  height: 45px;
+}
+
+/* .container-tip input[type=button]:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan)
+} */
+
+.container-tip input[type=number]::placeholder {
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
+}
+
+.conatiner-num-people {
+  margin-bottom: 20px;
+}
+
+.conatiner-num-people p{
+  margin-bottom: 7px;
+}
+
+.conatiner-num-people div {
+  position: relative;
+}
+
+.conatiner-num-people img {
+  position: absolute;
+  top: 15px;
+  left: 13px;
+}
+
+.result-card-container {
+  background-color: var(--Very-dark-cyan);
+  padding: 35px 20px 15px;
+  border-radius: 10px;
+}
+
+.result-card-container .tip-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.result-card-container .tip-flex div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card-container .tip-flex div:first-child span:first-child {
+  color: var(--Light-grayish-cyan-2);
+  font-size: 14px;
+}
+
+.result-card-container .tip-flex div:first-child span:last-child {
+  color: var(--Dark-grayish-cyan);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.result-card-container .tip-flex div:last-child {
+  color: var(--Strong-cyan);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.result-card-container button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Strong-cyan);
+  font-family: 'Space Mono', monospace;
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
