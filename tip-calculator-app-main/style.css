@@ -68,6 +68,7 @@ input[type=number]::placeholder {
   font-size: 15px;
   font-weight: 700;
   color: var(--Dark-grayish-cyan-2);
+  display: inline;
 }
 
 .card-container {
@@ -115,11 +116,6 @@ input[type=number]::placeholder {
   height: 45px;
 }
 
-/* .container-tip input[type=button]:hover {
-  background-color: var(--Strong-cyan);
-  color: var(--Very-dark-cyan)
-} */
-
 .container-tip input[type=number]::placeholder {
   color: var(--Dark-grayish-cyan);
   font-weight: 700;
@@ -129,8 +125,19 @@ input[type=number]::placeholder {
   margin-bottom: 20px;
 }
 
-.conatiner-num-people p{
+.conatiner-num-people > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conatiner-num-people p:first-child{
   margin-bottom: 7px;
+}
+
+.conatiner-num-people .error-zero  {
+  display: none;
+  color: red;
+  letter-spacing: 1.25px;
 }
 
 .conatiner-num-people div {
@@ -188,4 +195,18 @@ input[type=number]::placeholder {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: -1px;
+}
+
+/* .container-tip input[type=button]:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan)
+} */
+
+.activate-input-btn {
+  background-color: var(--Strong-cyan) !important;
+  color: var(--Very-dark-cyan) !important;
+}
+
+.activate-input-number {
+  border: 2px solid var(--Strong-cyan);
 }
