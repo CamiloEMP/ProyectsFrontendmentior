@@ -3,6 +3,7 @@
 const inputBtn = document.querySelectorAll('.input-btn');
 const inputNumber = document.querySelectorAll('.input-number');
 
+
 // * Se remueve la clase por si hay alguno que ya tenga la misma
 const activateButton = (item) => {
   inputBtn.forEach((element) => {
@@ -17,6 +18,7 @@ inputBtn.forEach((element) => {
   element.addEventListener('click', () => {
     element.classList.add('activate-input-btn')
     activateButton(element)
+    porcentaje = element;
   })
 })
 
@@ -31,5 +33,17 @@ inputNumber.forEach(element => {
 
 // * --------- FUNCIONALIDAD ---------
 
-const bill = document.querySelectorAll('.bill');
-bill.addEventListener('')
+
+let porcentaje;
+let valueTipAmount = 0;
+let valueTotal;
+const tipAmount = document.querySelector('#tipAmount');
+const total = document.querySelector('#total');
+console.log(tipAmount, total);
+const bill = document.querySelector('#bill');
+console.log(bill);
+bill.addEventListener('keydown', async () => {
+  valueTipAmount = await bill.value;
+});
+
+tipAmount.innerHTML = `${valueTipAmount}`;
