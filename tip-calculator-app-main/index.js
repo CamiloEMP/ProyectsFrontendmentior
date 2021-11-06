@@ -1,16 +1,25 @@
-const inputBtn = document.querySelectorAll('.input-btn');
+// * --------- EFECTOS VISUALES ------------
 
-for (let i = 0; i < inputBtn.length; i++) {
-  inputBtn[i].addEventListener('click', () => {
-    if (inputBtn[i].classList.contains('activate-input-btn')) {
-      inputBtn[i].classList.remove('activate-input-btn')
-    } else {
-      inputBtn[i].classList.add('activate-input-btn')
+const inputBtn = document.querySelectorAll('.input-btn');
+const inputNumber = document.querySelectorAll('.input-number');
+
+// * Se remueve la clase por si hay alguno que ya tenga la misma
+const activateButton = (item) => {
+  inputBtn.forEach((element) => {
+    if (element.classList.contains('activate-input-btn') && element != item) {
+      element.classList.remove('activate-input-btn');
     }
   })
 }
 
-const inputNumber = document.querySelectorAll('.input-number');
+// * Se agrega la clase y despues se valida que otro elemento no la tenga
+inputBtn.forEach((element) => {
+  element.addEventListener('click', () => {
+    element.classList.add('activate-input-btn')
+    activateButton(element)
+  })
+})
+
 inputNumber.forEach(element => {
   element.addEventListener('focus', () => {
     element.classList.add('activate-input-number')
@@ -18,4 +27,9 @@ inputNumber.forEach(element => {
   element.addEventListener('blur', () => {
     element.classList.remove('activate-input-number')
   })
-  });
+});
+
+// * --------- FUNCIONALIDAD ---------
+
+const bill = document.querySelectorAll('.bill');
+bill.addEventListener('')
