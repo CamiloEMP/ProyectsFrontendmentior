@@ -32,18 +32,13 @@ inputNumber.forEach(element => {
 });
 
 // * --------- FUNCIONALIDAD ---------
-
-
-let porcentaje;
-let valueTipAmount = 0;
-let valueTotal;
 const tipAmount = document.querySelector('#tipAmount');
 const total = document.querySelector('#total');
-console.log(tipAmount, total);
-const bill = document.querySelector('#bill');
-console.log(bill);
-bill.addEventListener('keydown', async () => {
-  valueTipAmount = await bill.value;
-});
-
-tipAmount.innerHTML = `${valueTipAmount}`;
+let dataBill;
+async function data() {
+  document.querySelector('#bill').addEventListener('keyup', (event) => {
+    console.log(event.target.value);
+    dataBill = event.target.value
+    tipAmount.innerHTML = dataBill;
+  });
+}
